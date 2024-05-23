@@ -1,0 +1,14 @@
+ansible-tomcat-docker/
+├── inventories/
+│   └── production/
+│       └── hosts.ini         # Inventory file
+├── playbooks/
+│   └── deploy-app.yml        # Playbook to deploy the application
+└── roles/
+    └── deploy-app/
+        ├── tasks/
+        │   └── main.yml      # Deploy application tasks
+        ├── files/
+        │   └── sample.war    # Sample application WAR file (replace with your app)
+        └── meta/
+            └── main.yml      # Deploy application metadata
