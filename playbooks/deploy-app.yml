@@ -1,0 +1,7 @@
+---
+- name: Deploy application to Tomcat Docker container
+  hosts: tomcat_containers
+  become: true  # Run tasks with root privileges
+
+  roles:
+    - deploy-app
