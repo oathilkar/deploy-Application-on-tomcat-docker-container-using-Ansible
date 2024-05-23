@@ -1,0 +1,8 @@
+---
+- name: Copy WAR file to Tomcat webapps directory
+  copy:
+    src: files/sample.war  # Replace with your WAR file
+    dest: /usr/local/tomcat/webapps/sample.war
+    owner: root
+    group: root
+    mode: '0644'
