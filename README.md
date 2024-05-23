@@ -2,6 +2,14 @@
 
 To deploy an application on a Tomcat Docker container using Ansible, you can follow a similar approach to deploying applications on a traditional server. However, instead of installing Tomcat directly on a host machine, you'll create a Docker container running Tomcat and deploy the application into that container. Below is a step-by-step guide to create an Ansible project for deploying an application on a Tomcat Docker container.
 
+### Summary
+
+- **Project Structure**: Organize your project with inventories, playbooks, and roles.
+- **Ansible Playbooks**: Define tasks to deploy the application into a Tomcat Docker container.
+- **Roles**: Use roles to encapsulate tasks for application deployment.
+- **Docker Connection**: Use `ansible_connection=docker` in the inventory file to tell Ansible to communicate with Docker containers.
+
+
 ### Project Structure
 
 Create the following directory structure for your Ansible project:
@@ -84,11 +92,5 @@ To deploy the application into a Tomcat Docker container, run the following comm
 ansible-playbook -i inventories/production/hosts.ini playbooks/deploy-app.yml
 ```
 
-### Summary
-
-- **Project Structure**: Organize your project with inventories, playbooks, and roles.
-- **Ansible Playbooks**: Define tasks to deploy the application into a Tomcat Docker container.
-- **Roles**: Use roles to encapsulate tasks for application deployment.
-- **Docker Connection**: Use `ansible_connection=docker` in the inventory file to tell Ansible to communicate with Docker containers.
 
 This setup provides a scalable approach to deploying applications on Tomcat Docker containers using Ansible. Customize the configurations and tasks as needed for your application and environment requirements.
